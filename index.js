@@ -41,9 +41,9 @@ inputTodo.addEventListener("keydown", function (e) {
 });
 
 function deleteTodo() {
-  this.parentElement.parentElement.remove();
+  this.closest("li").remove();
 }
 
 function completeTodo() {
-  this.parentElement.parentElement.classList.toggle("mark-done");
+  this.closest("li").classList.toggle("mark-done");
 }
